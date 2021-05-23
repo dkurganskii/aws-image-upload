@@ -18,4 +18,8 @@ public class UserProfileService {
         return userProfileDataAccessService.getUserProfiles();
     }
 
+    public void uploadUserProfileImage(UUID userProfileID, MultipartFile file){
+
+    }
+
 }

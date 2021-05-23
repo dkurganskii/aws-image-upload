@@ -24,4 +24,17 @@ public class UserProfileController {
         return userProfileService.getUserProfiles();
     }
 
+    @PostMapping(
+            path = "{userProfileID}/image/download",
+            consumes = MediaType.MULTIPART_FROM_DATA_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+
+    )
+
+    public void uploadUserProfileImage(@PathVariable("userProfileID")UUID userProfileID,
+                                       @RequestParam("file") MultiPartFile file){
+        userProfileService.uploadUserProfileImage(userProfileID, file);
+
+    }
+
 }
