@@ -1,5 +1,6 @@
 package com.dmitrii.awsimageupload.profile;
 
+
 import com.dmitrii.awsimageupload.datastore.FakeUserProfileDataStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,7 +17,7 @@ public class UserProfileDataAccessService {
         this.fakeUserProfileDataStore = fakeUserProfileDataStore;
     }
 
-    List<UserProfile>getUserProfiles(){
+    List<UserProfile> getUserProfiles() {
         return fakeUserProfileDataStore.getUserProfiles();
     }
 }
